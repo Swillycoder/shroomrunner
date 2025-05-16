@@ -344,7 +344,7 @@ document.addEventListener('keydown', (e) => {
         }
     }
 
-    if (gameState === "gameOverScreen" || gameState === "winScreen") {
+    if (gameState === "gameOverScreen") {
         if (e.code === 'KeyP') {
             gameState = 'introScreen';
             score = 0;
