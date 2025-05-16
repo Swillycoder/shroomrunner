@@ -8,16 +8,16 @@ const map = new Image();
 map.src = 'http://localhost:8000/map.png';
 
 const images = {
-    shroom: 'http://localhost:8000/shroomback.png',
-    map: 'http://localhost:8000/map.png',
-    intro: 'http://localhost:8000/intro.png',
-    outro: 'http://localhost:8000/outro.png',
-    spores: 'http://localhost:8000/spores.png',
-    sporeprint: 'http://localhost:8000/sporeprint.png',
-    log: 'http://localhost:8000/log32px.png',
-    oil: 'http://localhost:8000/oil.png',
-    toxic: 'http://localhost:8000/toxic.png',
-    radiation: 'http://localhost:8000/radiation.png',
+    shroom: 'https://raw.githubusercontent.com/Swillycoder/shroomrunner/main/shroomback.png',
+    map: 'https://raw.githubusercontent.com/Swillycoder/shroomrunner/main/map.png',
+    intro: 'https://raw.githubusercontent.com/Swillycoder/shroomrunner/main/intro.png',
+    outro: 'https://raw.githubusercontent.com/Swillycoder/shroomrunner/main/outro.png',
+    spores: 'https://raw.githubusercontent.com/Swillycoder/shroomrunner/main/spores.png',
+    sporeprint: 'https://raw.githubusercontent.com/Swillycoder/shroomrunner/main/sporeprint.png',
+    log: 'https://raw.githubusercontent.com/Swillycoder/shroomrunner/main/log32px.png',
+    oil: 'https://raw.githubusercontent.com/Swillycoder/shroomrunner/main/oil.png',
+    toxic: 'https://raw.githubusercontent.com/Swillycoder/shroomrunner/main/toxic.png',
+    radiation: 'https://raw.githubusercontent.com/Swillycoder/shroomrunner/main/radiation.png',
 
 };
 
