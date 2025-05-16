@@ -5,7 +5,7 @@ canvas.width = 512;
 canvas.height = 608;
 
 const map = new Image();
-map.src = 'http://localhost:8000/map.png';
+map.src = 'https://raw.githubusercontent.com/Swillycoder/shroomrunner/main/map.png';
 
 const images = {
     shroom: 'https://raw.githubusercontent.com/Swillycoder/shroomrunner/main/shroomback.png',
