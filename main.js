@@ -4,8 +4,8 @@ const ctx = canvas.getContext('2d');
 canvas.width = 512;
 canvas.height = 608;
 
-//const map = new Image();
-//map.src = 'https://raw.githubusercontent.com/Swillycoder/shroomrunner/main/map.png';
+const map = new Image();
+map.src = 'https://raw.githubusercontent.com/Swillycoder/shroomrunner/main/map.png';
 
 const agaric = new Image();
 agaric.src = 'https://raw.githubusercontent.com/Swillycoder/shroomrunner/main/agaricpixel.png';
