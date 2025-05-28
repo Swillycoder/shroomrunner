@@ -35,7 +35,7 @@ radiation.onload = () => {radiation.loaded = true;};
 
 const images = {
     shroom: 'https://raw.githubusercontent.com/Swillycoder/shroomrunner/main/shroomback.png',
-    map: 'https://raw.githubusercontent.com/Swillycoder/shroomrunner/main/map.png',
+    //map: 'https://raw.githubusercontent.com/Swillycoder/shroomrunner/main/map.png',
     intro: 'https://raw.githubusercontent.com/Swillycoder/shroomrunner/main/intro.png',
     outro: 'https://raw.githubusercontent.com/Swillycoder/shroomrunner/main/outro.png',
     //spores: 'https://raw.githubusercontent.com/Swillycoder/shroomrunner/main/spores.png',
