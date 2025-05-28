@@ -214,10 +214,13 @@ function collisionRewards() {
 
         if (isColliding(player, reward)) {
             score += 25;
-            reward.x = 150 + Math.random() * 180; 
-            reward.y = -(Math.random() * 600); 
             
-            continue;
+            rewards.splice(i, 1);
+
+            // Add a new reward in a new random location
+            let x = 150 + Math.random() * 180;
+            let y = -(Math.random() * 600);
+            rewards.push(new Rewards(x, y, getRandomReward()));
         }
     }
 }
