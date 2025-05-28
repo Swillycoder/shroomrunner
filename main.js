@@ -12,12 +12,16 @@ const images = {
     map: 'https://raw.githubusercontent.com/Swillycoder/shroomrunner/main/map.png',
     intro: 'https://raw.githubusercontent.com/Swillycoder/shroomrunner/main/intro.png',
     outro: 'https://raw.githubusercontent.com/Swillycoder/shroomrunner/main/outro.png',
-    spores: 'https://raw.githubusercontent.com/Swillycoder/shroomrunner/main/spores.png',
-    sporeprint: 'https://raw.githubusercontent.com/Swillycoder/shroomrunner/main/sporeprint.png',
-    log: 'https://raw.githubusercontent.com/Swillycoder/shroomrunner/main/log32px.png',
+    //spores: 'https://raw.githubusercontent.com/Swillycoder/shroomrunner/main/spores.png',
+    //sporeprint: 'https://raw.githubusercontent.com/Swillycoder/shroomrunner/main/sporeprint.png',
+    //log: 'https://raw.githubusercontent.com/Swillycoder/shroomrunner/main/log32px.png',
     oil: 'https://raw.githubusercontent.com/Swillycoder/shroomrunner/main/oil.png',
     toxic: 'https://raw.githubusercontent.com/Swillycoder/shroomrunner/main/toxic.png',
     radiation: 'https://raw.githubusercontent.com/Swillycoder/shroomrunner/main/radiation.png',
+
+    agaric: 'https://raw.githubusercontent.com/Swillycoder/shroomrunner/main/agaricpixel.png',
+    shroomblue: 'https://raw.githubusercontent.com/Swillycoder/shroomrunner/main/shroombluepixel.png',
+    shroompurple: 'https://raw.githubusercontent.com/Swillycoder/shroomrunner/main/shroompurplepixel.png',
 
 };
 
@@ -178,7 +182,7 @@ function getRandomImage() {
 }
 
 function getRandomReward() {
-    const randReward = [loadedImages.log, loadedImages.spores, loadedImages.sporeprint];
+    const randReward = [loadedImages.agaric, loadedImages.shroomblue, loadedImages.shroompurple];
     return randReward[Math.floor(Math.random() * 3)];
 }
 
