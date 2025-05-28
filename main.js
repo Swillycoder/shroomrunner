@@ -4,8 +4,8 @@ const ctx = canvas.getContext('2d');
 canvas.width = 512;
 canvas.height = 608;
 
-const map = new Image();
-map.src = 'https://raw.githubusercontent.com/Swillycoder/shroomrunner/main/map.png';
+//const map = new Image();
+//map.src = 'https://raw.githubusercontent.com/Swillycoder/shroomrunner/main/map.png';
 
 const images = {
     shroom: 'https://raw.githubusercontent.com/Swillycoder/shroomrunner/main/shroomback.png',
@@ -297,13 +297,13 @@ function gameScreen() {
         rewards.forEach(rew => rew.speed = rewardsSpeed)
     }
 
-    collisionRewards();
     collisionObstacle();
+    collisionRewards();
 
     ctx.font = '25px Impact';
     ctx.fillStyle = 'black';
     ctx.textAlign = 'center';
-    ctx.fillText(`${score}`, canvas.width/2, 577);
+    ctx.fillText(`SCORE ${score}`, canvas.width/2, 577);
 }
 
 
