@@ -4,49 +4,20 @@ const ctx = canvas.getContext('2d');
 canvas.width = 512;
 canvas.height = 608;
 
-const map = new Image();
-map.src = 'https://raw.githubusercontent.com/Swillycoder/shroomrunner/main/map.png';
-
-const agaric = new Image();
-agaric.src = 'https://raw.githubusercontent.com/Swillycoder/shroomrunner/main/agaricpixel.png';
-
-const shroomblue = new Image();
-shroomblue.src = 'https://raw.githubusercontent.com/Swillycoder/shroomrunner/main/shroombluepixel.png';
-
-const shroompurple = new Image();
-shroompurple.src = 'https://raw.githubusercontent.com/Swillycoder/shroomrunner/main/shroompurplepixel.png';
-
-const oil = new Image();
-oil.src = 'https://raw.githubusercontent.com/Swillycoder/shroomrunner/main/oil.png';
-
-const toxic = new Image();
-toxic.src = 'https://raw.githubusercontent.com/Swillycoder/shroomrunner/main/toxic.png';
-
-const radiation = new Image();
-radiation.src = 'https://raw.githubusercontent.com/Swillycoder/shroomrunner/main/radiation.png';
-
-map.onload = () => {map.loaded = true;};
-agaric.onload = () => {agaric.loaded = true;};
-shroomblue.onload = () => {shroomblue.loaded = true;};
-shroompurple.onload = () => {shroompurple.loaded = true;};
-oil.onload = () => {oil.loaded = true;};
-toxic.onload = () => {toxic.loaded = true;};
-radiation.onload = () => {radiation.loaded = true;};
-
 const images = {
     shroom: 'https://raw.githubusercontent.com/Swillycoder/shroomrunner/main/shroomback.png',
-    //map: 'https://raw.githubusercontent.com/Swillycoder/shroomrunner/main/map.png',
+    map: 'https://raw.githubusercontent.com/Swillycoder/shroomrunner/main/map.png',
     intro: 'https://raw.githubusercontent.com/Swillycoder/shroomrunner/main/intro.png',
     outro: 'https://raw.githubusercontent.com/Swillycoder/shroomrunner/main/outro.png',
-    //spores: 'https://raw.githubusercontent.com/Swillycoder/shroomrunner/main/spores.png',
-    //sporeprint: 'https://raw.githubusercontent.com/Swillycoder/shroomrunner/main/sporeprint.png',
-    //log: 'https://raw.githubusercontent.com/Swillycoder/shroomrunner/main/log32px.png',
-    //oil: 'https://raw.githubusercontent.com/Swillycoder/shroomrunner/main/oil.png',
-    //toxic: 'https://raw.githubusercontent.com/Swillycoder/shroomrunner/main/toxic.png',
-    //radiation: 'https://raw.githubusercontent.com/Swillycoder/shroomrunner/main/radiation.png',
-    //agaric: 'https://raw.githubusercontent.com/Swillycoder/shroomrunner/main/agaricpixel.png',
-    //shroomblue: 'https://raw.githubusercontent.com/Swillycoder/shroomrunner/main/shroombluepixel.png',
-    //shroompurple: 'https://raw.githubusercontent.com/Swillycoder/shroomrunner/main/shroompurplepixel.png',
+    spores: 'https://raw.githubusercontent.com/Swillycoder/shroomrunner/main/spores.png',
+    sporeprint: 'https://raw.githubusercontent.com/Swillycoder/shroomrunner/main/sporeprint.png',
+    log: 'https://raw.githubusercontent.com/Swillycoder/shroomrunner/main/log32px.png',
+    oil: 'https://raw.githubusercontent.com/Swillycoder/shroomrunner/main/oil.png',
+    toxic: 'https://raw.githubusercontent.com/Swillycoder/shroomrunner/main/toxic.png',
+    radiation: 'https://raw.githubusercontent.com/Swillycoder/shroomrunner/main/radiation.png',
+    agaric: 'https://raw.githubusercontent.com/Swillycoder/shroomrunner/main/agaricpixel.png',
+    shroomblue: 'https://raw.githubusercontent.com/Swillycoder/shroomrunner/main/shroombluepixel.png',
+    shroompurple: 'https://raw.githubusercontent.com/Swillycoder/shroomrunner/main/shroompurplepixel.png',
 };
 
 const loadImage = (src) => {
@@ -201,12 +172,12 @@ let speedIncreaseInterval = 600;
 
 
 function getRandomImage() {
-    const randImage = [oil, toxic, radiation];
+    const randImage = [loadedImages.oil, loadedImages.toxic, loadedImages.radiation];
     return randImage[Math.floor(Math.random() * 3)];
 }
 
 function getRandomReward() {
-    const randReward = [agaric, shroomblue, shroompurple];
+    const randReward = [loadedImages.agaric, loadedImages.shroomblue, loadedImages.shroompurple];
     return randReward[Math.floor(Math.random() * 3)];
 }
 
@@ -288,7 +259,7 @@ let backgroundY = 608;
 
 function gameScreen() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    ctx.drawImage(map, 0, backgroundY);
+    ctx.drawImage(loadedImages.map, 0, backgroundY);
 
     backgroundY += backgroundSpeed;
     if (backgroundY >= 0) {
