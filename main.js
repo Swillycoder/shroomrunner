@@ -264,12 +264,12 @@ let backgroundY = 608;
 
 function gameScreen() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    ctx.drawImage(map, 0, backgroundY);
+    //ctx.drawImage(map, 0, backgroundY);
 
-    backgroundY += backgroundSpeed;
-    if (backgroundY >= 0) {
-        backgroundY = -608;
-    }
+    //backgroundY += backgroundSpeed;
+    //if (backgroundY >= 0) {
+    //    backgroundY = -608;
+    //}
 
     player.update();
 
